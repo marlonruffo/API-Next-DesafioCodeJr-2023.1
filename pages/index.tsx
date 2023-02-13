@@ -7,6 +7,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <Navbar NomeDoSite={'Nome do site teste'} Item1={'Home'} Item2={'Funcionários'} Item3={'Outro item'} Item4={'Login'}/>
+    <Navbar NomeDoSite={'Cloud Service'} Item1={'Home'} Item2={'Contato'} Item3={'Funcionários'} Item4={'Login'} Logo={'/logonav.png'}/>
   )
 }

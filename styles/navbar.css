@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sansita+Swashed&display=swap');
+  *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #E3E0D1;
+    color: #AC9479;
+  }
+  .nav-container{
+    position: fixed;
+    background-color:#E3E0D1;
+    display: flex; 
+  }
+  .NomeDoSite{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-family: 'Sansita Swashed', cursive;
+  }
+  .Home{
+    color: #AF3D3D;
+  }
+  .NavEsquerda, .NavDireita {
+    
+    display: flex;
+    align-items: center;
+  }
+  
+  .NavDireita {
+    flex-direction: row;
+  }
+  
+  ul {
+
+    background-color: #E3E0D1; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .nav-item  {
+    padding: 10px;
+    background-color: #E3E0D1;
+    cursor: pointer;
+  }
+  a{  
+    font-family: 'Pridi', serif;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .logo{
+    background-color: #E3E0D1;
+    margin-left: 2px;
+  }
+  
+  .nav-link{
+    color: #AC9479;
+  }
+  .Login {
+    background-color: #EEECE3;
+    color: #AC9479;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      height: 100%;
+    }
+    .NavEsquerda {
+      flex-direction: column;
+      align-items: center;
+    }
+    .NavDireita {
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-item {
+      padding: 0, 0,0,10px;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    
+    .NomeDoSite{
+      display: none;
+    }
+    .nav-item {
+      justify-content: space-around;
+  }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .logo{
+      width: 40px;
+      height: 40px;
+    }
+    .NomeDoSite{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+
+    .NomeDoSite{
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 360px) {
+    .logo{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    .logo{
+      display: flex;
+    }
+    .NomeDoSite{
+      display: flex;
+    }
+    nav{
+      width: 450px;
+    }
+  }

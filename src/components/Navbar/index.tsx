@@ -1,29 +1,49 @@
+
+import NextImage from 'next/image'
 interface NavbarProps{
     NomeDoSite:string
     Item1:string
     Item2:string
     Item3:string
     Item4:string
+    Logo?:string
 }
 
-export function Navbar({  NomeDoSite, Item1, Item2, Item3, Item4  }: NavbarProps){
+export function Navbar({ Logo, NomeDoSite, Item1, Item2, Item3, Item4  }: NavbarProps){
     return(
-        <nav>
-            <div className="NavEsquerda">
-                <ul>
-                    <li>{NomeDoSite}</li>
-                </ul>
-            </div>
-            <div className="NavDireita">
-                <ul>
-                    <li>{Item1}</li>
-                    <li>{Item2}</li>
-                    <li>{Item3}</li>
-                    <li>{Item4}</li>
-
-                </ul>
-            </div>
-            
-        </nav>
+        <div className='Nav-container'>
+            <nav>
+                <div className="NavEsquerda">
+                    <ul>
+                    <NextImage className="logo" src={Logo} alt={'Logo da Marca'} width={'50'} height={'50'}/> 
+                        <li className="NomeDoSite">{NomeDoSite}</li>
+                    </ul>
+                </div>
+                <div className="NavDireita">              
+                    <ul>
+                    <li className=" nav-item">
+                            <a className="Home" href='#'>
+                                {Item1}
+                            </a>
+                        </li>
+                        <li className=" nav-item">
+                            <a className="nav-link" href='#'>
+                                {Item2}
+                            </a>
+                        </li>
+                        <li className=" nav-item">
+                            <a className="nav-link" href='#'>
+                                {Item3}
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className=" Login" href='#'>
+                                {Item4}
+                            </a>
+                        </li>
+                    </ul>
+                </div>            
+            </nav>
+        </div>
     )
 }
