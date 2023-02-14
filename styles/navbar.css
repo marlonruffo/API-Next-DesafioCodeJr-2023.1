@@ -4,6 +4,13 @@
     margin: 0px;
     padding: 0px;
 }
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pridi', serif;
+font-family: 'Rouge Script', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Sansita Swashed', cursive;
+*/
   nav {
     position: relative;
     display: flex;
@@ -58,6 +65,7 @@
     font-weight: 300;
     text-decoration: none;
   }
+
   .logo{
     background-color: #E3E0D1;
     margin-left: 2px;
@@ -72,7 +80,35 @@
     padding: 10px 10px;
     border-radius: 10px;
   }
+  .logo:hover{
+    transition: .5s;
+    transform: scale3d(1.01, 1.1, 1.1);
+    cursor:pointer;
+  }
 
+  .NomeDoSite:hover{
+    transition: .5s;
+    transform: scale3d(1.01, 1.1, 1.1);
+    cursor: pointer;
+  }
+
+  .nav-link:hover{
+    color: #ffffff;
+    transition: .2s;
+    transform: scale3d(1.5, 1.1, 10);
+  }
+  .Home:hover{
+    color: #f40505;
+    transition: .2s;
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+
+  .Login:hover{
+    background-color: #AF3D3D;
+    transition: .5s;
+    transform: scale3d(1.5, 1.1, 1.1);
+    color: white;
+  }
   @media screen and (max-width: 768px) {
     .nav-container {
       flex-direction: column;
@@ -91,6 +127,7 @@
     }
   }
 
+  
   @media screen and (max-width: 414px) {
     
     .NomeDoSite{
