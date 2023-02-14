@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sansita+Swashed&display=swap');
-  *{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-/*
-font-family: 'Open Sans', sans-serif;
-font-family: 'Pridi', serif;
-font-family: 'Rouge Script', cursive;
-font-family: 'Sacramento', cursive;
-font-family: 'Sansita Swashed', cursive;
-*/
+
   nav {
     position: relative;
     display: flex;

@@ -6,7 +6,7 @@ interface NavbarProps{
     Item2:string
     Item3:string
     Item4:string
-    Logo?:string
+    Logo:string
 }
 
 export function Navbar({ Logo, NomeDoSite, Item1, Item2, Item3, Item4  }: NavbarProps){
