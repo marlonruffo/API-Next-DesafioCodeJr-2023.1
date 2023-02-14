@@ -9,13 +9,13 @@ interface NavbarProps{
     Logo:string
 }
 
-export function Navbar({ Logo, NomeDoSite, Item1, Item2, Item3, Item4  }: NavbarProps){
+export function Navbar1({ Logo, NomeDoSite, Item1, Item2, Item3, Item4  }: NavbarProps){
     return(
         <div className='Nav-container'>
             <nav>
                 <div className="NavEsquerda">
                     <ul>
-                    <NextImage className="logo" src={Logo} alt={'Logo da Marca'} width={'50'} height={'50'}/> 
+                    <NextImage className="logonavbar" src={Logo} alt={'Logo da Marca'} width={'50'} height={'50'}/> 
                         <li className="NomeDoSite">{NomeDoSite}</li>
                     </ul>
                 </div>

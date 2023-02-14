@@ -1,0 +1,44 @@
+footer{
+    background-color: #FAF8EF;
+    height: 100px;
+    color: #0c0c0c;
+    padding: 0px;
+    text-align: center;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    font-family: 'Rouge Script', cursive;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos{
+    margin-left: 2px;
+}
+
+.Logos-sociais{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.EscritaCentro{
+    font-family: 'Sacramento', cursive;
+    font-size: 15px;
+    color: rgb(6, 6, 6);
+}
+
+.logos:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 392px) and (min-width: 281px)  {
+    .logos{
+        width: 30px;
+        height: 30px;
+    }
+}
