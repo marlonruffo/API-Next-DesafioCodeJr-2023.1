@@ -37,7 +37,7 @@
     padding: 10px;
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.10);
 }
-label{
+.InputBoxes label{
     font-family: 'Open Sans', sans-serif;
     margin-top: 50px;
     font-size: 16px;
@@ -56,7 +56,7 @@ label{
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 10px;
+    padding: 0px;
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -70,14 +70,14 @@ label{
     background-color: #AC9479 !important;
 }
 
-input{
+.InputBoxes input{
     opacity: 80%;
     letter-spacing: 1px;
     font-family: 'Pridi', serif;
     transition: .5s;
     outline-color: #AC9479;
 }
-button:hover{
+.Login_box button:hover{
     transform: scale3d(1.1, 1.1, 1.1);
     transition: 0.5s;
 }

@@ -37,7 +37,7 @@ export function Navbar1({ Logo, NomeDoSite, Item1, Item2, Item3, Item4  }: Navba
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className=" Login" href='#'>
+                            <a className=" NavLogin" href='#'>
                                 {Item4}
                             </a>
                         </li>

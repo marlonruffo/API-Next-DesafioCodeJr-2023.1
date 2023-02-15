@@ -32,7 +32,7 @@
     flex-direction: row;
   }
   
-  ul {
+  .Nav-container ul {
 
     background-color: #FAF8EF; 
     list-style: none;
@@ -48,7 +48,7 @@
     background-color: #FAF8EF;
     cursor: pointer;
   }
-  a{  
+  .nav-item a{  
     font-family: 'Pridi', serif;
     font-weight: 300;
     text-decoration: none;
@@ -62,7 +62,7 @@
   .nav-link{
     color: #AC9479;
   }
-  .Login {
+  .NavLogin {
     background-color: #EEECE3;
     color: #AC9479;
     padding: 10px 10px;
@@ -91,7 +91,7 @@
     transform: scale3d(1.5, 1.5, 1.5);
   }
 
-  .Login:hover{
+  .NavLogin:hover{
     background-color: #AF3D3D;
     transition: .5s;
     transform: scale3d(1.5, 1.1, 1.1);
@@ -127,7 +127,7 @@
   }
   
   @media screen and (max-width: 375px) {
-    .logo{
+    .logonavbar{
       width: 40px;
       height: 40px;
     }
@@ -145,13 +145,13 @@
   }
 
   @media screen and (max-width: 360px) {
-    .logo{
+    .logonavbar{
       display: none;
     }
   }
 
   @media screen and (max-width: 280px) {
-    .logo{
+    .logonavbar{
       display: flex;
     }
     .NomeDoSite{
