@@ -1,163 +1,103 @@
+.Nav-container {
+  width: 100%;
+  height: 80px;
+  background-color: #FAF8EF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #FAF8EF;
-    color: #AC9479;
-  }
-  .nav-container{
-    position: fixed;
-    background-color:#FAF8EF;
-    display: flex; 
-  }
-  .NomeDoSite{
-    
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    font-family: 'Sansita Swashed', cursive;
-  }
-  .Home{
-    color: #AF3D3D;
-  }
-  .NavEsquerda, .NavDireita {
-    
-    display: flex;
-    align-items: center;
-  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; 
+}
+
+.NavEsquerda {
+  display: flex;
+  align-items: center;
+}
+
+.NavEsquerda ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavEsquerda ul li {
   
-  .NavDireita {
-    flex-direction: row;
-  }
+  margin-right: 10px;
+}
+
+
+
+.NomeDoSite {
+  font-family: 'Sansita Swashed', cursive;
+  color: #AC9479;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.NavDireita {
+  display: flex;
+  align-items: center;
+}
+
+.NavLinks ul {
   
-  .Nav-container ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    background-color: #FAF8EF; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    
-  }
+.nav-item {
   
-  .nav-item  {
-    padding: 10px;
-    background-color: #FAF8EF;
-    cursor: pointer;
-  }
-  .nav-item a{  
-    font-family: 'Pridi', serif;
-    font-weight: 300;
-    text-decoration: none;
-  }
+  font-weight: 700;
+  font-family: 'Pridi', serif;
+  margin: 0 10px;
+}
+.nav-item a {
+  font-weight: 700;
+  color: #AC9479;
+  text-decoration: none;
+}
 
-  .logonavbar{
-    background-color: #FAF8EF;
-    margin-left: 2px;
-  }
-  
-  .nav-link{
-    color: #AC9479;
-  }
-  .NavLogin {
-    background-color: #EEECE3;
-    color: #AC9479;
-    padding: 10px 10px;
-    border-radius: 10px;
-  }
-  .logonavbar:hover{
-    transition: .5s;
-    transform: scale3d(1.01, 1.1, 1.1);
-    cursor:pointer;
-  }
 
-  .NomeDoSite:hover{
-    transition: .5s;
-    transform: scale3d(1.01, 1.1, 1.1);
-    cursor: pointer;
-  }
+.nav-link {
+  font-size: 18px;
+  font-weight: 700;
+  color: #AC9479;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
 
-  .nav-link:hover{
-    color: #f40505;
-    transition: .2s;
-    transform: scale3d(1.5, 1.1, 10);
-  }
-  .Home:hover{
-    color: #f40505;
-    transition: .2s;
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
 
-  .NavLogin:hover{
-    background-color: #AF3D3D;
-    transition: .5s;
-    transform: scale3d(1.5, 1.1, 1.1);
-    color: white;
-  }
-  @media screen and (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      height: 100%;
-    }
-    .NavEsquerda {
-      flex-direction: column;
-      align-items: center;
-    }
-    .NavDireita {
-      flex-direction: column;
-      align-items: center;
-    }
-    .nav-item {
-      padding: 0, 0,0,10px;
-    }
-  }
 
-  
-  @media screen and (max-width: 414px) {
-    
-    .NomeDoSite{
-      display: none;
-    }
-    .nav-item {
-      justify-content: space-around;
-  }
-  }
-  
-  @media screen and (max-width: 375px) {
-    .logonavbar{
-      width: 40px;
-      height: 40px;
-    }
-    .NomeDoSite{
-      display: none;
-    }
-  }
 
-  @media screen and (max-width: 380px) {
+.NavLogin {
+  background-color: #dbd4cd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
 
-    .NomeDoSite{
-      display: none;
-    }
+.NavLogin:hover {
+  background-color: rgba(227, 161, 8, 0.351);
+}
 
-  }
+.nav-link:hover {
+  color: #c92828;
+}
 
-  @media screen and (max-width: 360px) {
-    .logonavbar{
-      display: none;
-    }
-  }
 
-  @media screen and (max-width: 280px) {
-    .logonavbar{
-      display: flex;
-    }
-    .NomeDoSite{
-      display: flex;
-    }
-    nav{
-      width: 450px;
-    }
-  }
