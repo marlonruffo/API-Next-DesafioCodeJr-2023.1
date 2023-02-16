@@ -14,7 +14,7 @@
 
 
 .bebidas h1{
-    width: 300px;
+
     color: rgb(0, 0, 0);
 
     text-align: center;
@@ -33,6 +33,15 @@
         align-items: center;
   }
   .bebidas{
+    
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 330px) {
+
+  .bebida1 img{
+    width:100vw;
     margin-bottom: 32px;
   }
 }

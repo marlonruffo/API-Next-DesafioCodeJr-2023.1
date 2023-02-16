@@ -1,11 +1,14 @@
 .apresentacao-container {
     display: flex;
-    height: 558px;
+    height: auto;
   }
   
   .apresentacao-esq {
     width: 50%;
     
+  }
+  .apresentacao-esq img{
+    width: 100%;
   }
   
   .apresentacao-dir {
@@ -93,7 +96,7 @@
     @media (max-width: 685px) {
       .apresentacao-container {
         display: block;   /*Problema*/
-        height: 1116px;
+
 
       }
       .apresentacao-esq {
@@ -101,11 +104,9 @@
         
 
       }
-      .apresentacao-esq h1{
-        height: 558px;
-        width: 100%;
-      }
+
       .apresentacao-dir {
+
         width: 100%;
         background-color: #E3E0D1;
         align-items: center;
@@ -138,23 +139,16 @@
     @media (max-width: 540px) {
       .apresentacao-container {
         display: block;   /*Problema*/
-        height: 900px;
 
+
+      }
+      .apresentacao-esq img{
+        height: 50%;
       }
     }
 
-    @media (max-width: 439px) {
-      .apresentacao-container {
-        height: 1000px;
-      }
 
-    }
-    @media (max-width: 325px) {
-      .apresentacao-container {
-        height: 1100px;
-      }
 
-    }
     @media (max-width: 293px) {
       .apresentacao-container {
         height: 1150px;

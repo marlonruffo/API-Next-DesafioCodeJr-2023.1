@@ -3,8 +3,9 @@ import NextImage from 'next/image'
 export function Cardapresentacao(){
     return(
         <div className="apresentacao-container">
-            <div className="apresentacao-esq" style={{backgroundImage: "url('/apresentacao1.jpg')"}}>
-                <h1></h1>
+            <div className="apresentacao-esq" >
+            <NextImage src="/apresentacao1.jpg" alt="Vinho" width={600} height={558} />
+                
                 
                 
             </div>

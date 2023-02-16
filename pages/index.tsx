@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function HomePage() {
   return (
-    <div>
+    <div className='PaginaInteira'>
         <Navbar1 NomeDoSite={'Cloud Service'} Item1={'Home'} Item2={'Contato'} Item3={'Funcionários'} Item4={'Login'} Logo={'/logonav.png'}/>
         <Cardapresentacao/>
         <h1 className='TitlesHome'>Pratos do dia</h1>
