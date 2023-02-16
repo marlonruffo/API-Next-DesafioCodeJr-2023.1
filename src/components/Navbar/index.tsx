@@ -23,6 +23,8 @@ export function Navbar1({
 
 
   return (
+  <header className="header">
+
     <div className="Nav-container">
       <nav>
         <div className="NavEsquerda">
@@ -62,5 +64,6 @@ export function Navbar1({
         </div>
       </nav>
     </div>
+  </header>
   );
 }
