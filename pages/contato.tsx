@@ -15,10 +15,6 @@ export default function ContatoPage() {
     <Navbar1 NomeDoSite={'Cloud Service'} Item1={'Home'} Item2={'Contato'} Item3={'Funcionários'} Item4={'Login'} Logo={'/logonav.png'}/>
     <CardContato1 Titulo={'Entre em contato com a gente'} Imagem1={'/facebook.png'} Imagem2={'/instagram.png'} Imagem3={'/linkedin.png'} Imagem4={'/twitter.png'} LabelImagem1={'CloudRestaurant'} LabelImagem2={'CloudRestaurant'} LabelImagem3={'CloudRestaurant'} LabelImagem4={'@CloudRestaurant'}/>
     <Footer1 LogoEmpresa={'/cloudservice.png'} EscritaCentro={'Italian Cuisine'} LogoRedeSocial1={'/instagram.png'} LogoRedeSocial2={'/facebook.png'} LogoRedeSocial3={'/linkedin.png'} />
-  
-    
     </div>
-
-    
   )
 }

@@ -1,0 +1,181 @@
+.apresentacao-container {
+    display: flex;
+    height: 558px;
+  }
+  
+  .apresentacao-esq {
+    width: 50%;
+    
+  }
+  
+  .apresentacao-dir {
+    width: 50%;
+    background-color: #E3E0D1;
+    align-items: center;
+  }
+  .apresentacao-dir h1{
+    font-family: 'Rouge Script', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 85px;
+    text-align: center;
+    font-style: normal;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .apresentacao-dir h2{
+  font-family: 'Sacramento', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 47px;
+  text-decoration-line: underline;
+  margin-left: 60px;
+  margin-top: 20px;
+  }
+
+  .apresentacao-dir p{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 44px;
+    margin-left: 60px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    }
+
+    @media (max-width: 1253px) {
+      .apresentacao-dir h1{
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-top: 20px;
+      }
+      .apresentacao-dir h2{
+        font-family: 'Sacramento', cursive;
+        font-size: 25px;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+      .apresentacao-dir p{
+        margin-top: 40px;
+        font-size: 22px;
+        line-height: 35px;
+        }
+    
+    }
+
+    @media (max-width: 971px) {
+      .apresentacao-dir h1{
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-top: 20px;
+      }
+      .apresentacao-dir h2{
+        font-family: 'Sacramento', cursive;
+        font-size: 25px;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+      .apresentacao-dir p{
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 35px;
+        }
+    
+    }
+
+    @media (max-width: 685px) {
+      .apresentacao-container {
+        display: block;   /*Problema*/
+        height: 1116px;
+
+      }
+      .apresentacao-esq {
+        width: 100%;
+        
+
+      }
+      .apresentacao-esq h1{
+        height: 558px;
+        width: 100%;
+      }
+      .apresentacao-dir {
+        width: 100%;
+        background-color: #E3E0D1;
+        align-items: center;
+      }
+
+      .apresentacao-dir h1{
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 40px;
+        
+      }
+
+      .apresentacao-dir h2{
+        margin-left: 10px;
+        font-size: 25px;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+      .apresentacao-dir p{
+        margin-top: 10px;
+        margin-left: 10px;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 35px;
+        }
+    
+    }
+
+    @media (max-width: 540px) {
+      .apresentacao-container {
+        display: block;   /*Problema*/
+        height: 900px;
+
+      }
+    }
+
+    @media (max-width: 439px) {
+      .apresentacao-container {
+        height: 1000px;
+      }
+
+    }
+    @media (max-width: 325px) {
+      .apresentacao-container {
+        height: 1100px;
+      }
+
+    }
+    @media (max-width: 293px) {
+      .apresentacao-container {
+        height: 1150px;
+      }
+
+    }
+    @media (max-width: 256px) {
+      .apresentacao-container {
+        height: 1200px;
+      }
+
+    }
+    @media (max-width: 232px) {
+      .apresentacao-container {
+        height: 1300px;
+      }
+
+    }
+
+    @media (max-width: 199px) {
+      .apresentacao-container {
+        height: 1350px;
+      }
+    }

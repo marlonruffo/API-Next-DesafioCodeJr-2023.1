@@ -5,6 +5,7 @@ import '../styles/contato.css'
 import '../styles/footer.css'
 import '../styles/cardcomidaprincipal.css'
 import '../styles/home.css'
+import '../styles/apresentacao.css'
 
 
 export default function App({ Component, pageProps }) {
