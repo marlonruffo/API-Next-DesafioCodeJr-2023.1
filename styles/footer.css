@@ -37,9 +37,15 @@ footer{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 392px) and (min-width: 281px)  {
+@media only screen and (max-width: 392px)   {
     .logos{
         width: 30px;
         height: 30px;
+    }
+}
+
+@media only screen and (max-width: 392px)   {
+    .EscritaCentro{
+        font-size: 10px;
     }
 }

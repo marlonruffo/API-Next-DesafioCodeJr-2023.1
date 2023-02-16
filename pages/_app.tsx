@@ -3,6 +3,7 @@ import '../styles/navbar.css'
 import '../styles/login.css'
 import '../styles/contato.css'
 import '../styles/footer.css'
+import '../styles/cardcomidaprincipal.css'
 
 
 export default function App({ Component, pageProps }) {

@@ -7,6 +7,7 @@
   left: 0;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 nav {
@@ -14,6 +15,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 100%; 
+  
 }
 
 .NavEsquerda {
@@ -101,3 +103,22 @@ nav {
 }
 
 
+@media (max-width: 512px) {
+  .NomeDoSite{
+    display: none;
+  }
+  .logonavbar{
+    display: none;
+  }
+}
+
+@media (max-width: 365px) {
+  .nav-link{
+    font-size: 12px;
+    
+  }
+  .NavLogin{
+    font-size: 12px;
+    
+  }
+}
