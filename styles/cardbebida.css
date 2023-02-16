@@ -1,0 +1,39 @@
+.bebida-container{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.bebidas img{
+
+    border-radius: 20px;
+}
+
+
+.bebidas h1{
+    width: 300px;
+    color: rgb(0, 0, 0);
+
+    text-align: center;
+    font-family: 'Rouge Script', cursive;
+    font-size: 60px;
+
+
+}
+
+
+@media (max-width: 887px) {
+    .bebida-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+  .bebidas{
+    margin-bottom: 32px;
+  }
+}
+

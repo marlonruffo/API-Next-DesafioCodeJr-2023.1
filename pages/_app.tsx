@@ -6,6 +6,7 @@ import '../styles/footer.css'
 import '../styles/cardcomidaprincipal.css'
 import '../styles/home.css'
 import '../styles/apresentacao.css'
+import '../styles/cardbebida.css'
 
 
 export default function App({ Component, pageProps }) {
