@@ -4,7 +4,7 @@ interface CardBebidaProps {
     imagem: string;
     titulo: string;
 }
-export function Cardbebidas({imagem, titulo}: CardBebidaProps) {
+export function CardVertical({imagem, titulo}: CardBebidaProps) {
     return(
 
             <div className="bebida-container">

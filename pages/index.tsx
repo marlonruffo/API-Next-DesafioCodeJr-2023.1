@@ -6,7 +6,7 @@ import { Footer1 } from '../src/components/Footer'
 import { CardComidaPrincipal1 } from '../src/components/CardComidaPrincipal'
 import { CardComidaPrincipal2 } from '../src/components/CardComidaPrincipal'
 import { Cardapresentacao } from '../src/components/Apresentacao'
-import { Cardbebidas } from '../src/components/CardBebida'
+import { CardVertical } from '../src/components/CardVertical'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,12 +22,20 @@ export default function HomePage() {
         <CardComidaPrincipal1 NomeDoPrato1={'Pizza'} DescricaoDoPrato1={'Pizza gourmet feita com massa fina e crocante, recheada  com cogumelos frescos, presunto Parma, e queijos especiais. É um prato perfeito para quem gosta de experimentar novos sabores.'} ImagemDoPrato1={'/pizza1.png'}/>
         <CardComidaPrincipal2 NomeDoPrato2={'Risoto'} DescricaoDoPrato2={'Risoto cremoso de frutos do mar, feito com arroz arbóreo e um mix de frutos do mar,Finalizado com um toque de queijo parmesão e ervas frescas. É um prato perfeito para quem ama frutos do mar.'} ImagemDoPrato2={'/risoto.jpg'}/>
         <h1 className='TitlesHome'>Bebidas</h1>
-      <div className="BebidasHome">
-        <Cardbebidas imagem={'/vinhofig.jpg'} titulo={'Vinho'}/>
-        <Cardbebidas imagem={'/refrigerante.png'} titulo={'Refrigerante'}/>
-        <Cardbebidas imagem={'/drinks.png'} titulo={'Drinks'}/>
+      <div className="CardverticalHome">
+        <CardVertical imagem={'/vinhofig.jpg'} titulo={'Vinho'}/>
+        <CardVertical imagem={'/refrigerante.png'} titulo={'Refrigerante'}/>
+        <CardVertical imagem={'/drinks.png'} titulo={'Drinks'}/>
 
       </div>
+      <h1 className='TitlesHome'>Sobremesas</h1>
+      <div className="CardverticalHome">
+      <CardVertical imagem={'/tiramisu.png'} titulo={'Tiramisù'}/>
+      <CardVertical imagem={'/pannacotta.png'} titulo={'Panna cotta'}/>
+
+      </div>
+
+
       <Footer1 LogoEmpresa={'/cloudservice.png'} EscritaCentro={'Italian Cuisine'} LogoRedeSocial1={'/instagram.png'} LogoRedeSocial2={'/facebook.png'} LogoRedeSocial3={'/linkedin.png'} />
   
     </div>

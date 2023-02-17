@@ -7,7 +7,7 @@
     font-family: 'Sansita', sans-serif;
     text-decoration-line: underline;
 }
-.BebidasHome{
+.CardverticalHome{
     display: flex;
     
 }
@@ -20,7 +20,7 @@
   }
 
   @media (max-width: 887px) {
-    .BebidasHome{
+    .CardverticalHome{
         margin-top: 50px;
         display: flex;
         flex-direction: column;
