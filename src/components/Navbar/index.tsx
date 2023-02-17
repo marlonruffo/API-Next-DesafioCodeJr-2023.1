@@ -2,22 +2,15 @@
 import NextImage from "next/image";
 
 type NavbarProps = {
-  Logo: string;
-  NomeDoSite: string;
-  Item1: string;
-  Item2: string;
-  Item3: string;
-  Item4: string;
+  logo: string;
+  nomeDoSite: string;
+  item1: string;
+  item2: string;
+  item3: string;
+  item4: string;
 };
 
-export function Navbar1({
-  Logo,
-  NomeDoSite,
-  Item1,
-  Item2,
-  Item3,
-  Item4,
-}: NavbarProps) {
+export function Navbar1({logo, nomeDoSite, item1, item2, item3, item4}: NavbarProps) {
   
 
 
@@ -30,9 +23,9 @@ export function Navbar1({
         <div className="NavEsquerda">
           <ul>
             <li className="logonavbar">
-              <NextImage src={Logo} alt={"Logo da Marca"} width={80} height={80} />
+              <NextImage src={logo} alt={"Logo da Marca"} width={80} height={80} />
             </li>
-            <li className="NomeDoSite">{NomeDoSite}</li>
+            <li className="NomeDoSite">{nomeDoSite}</li>
           </ul>
         </div>
         <div className="NavDireita">
@@ -40,22 +33,22 @@ export function Navbar1({
             <ul>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  {Item1}
+                  {item1}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  {Item2}
+                  {item2}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  {Item3}
+                  {item3}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="NavLogin" href="#">
-                  {Item4}
+                  {item4}
                 </a>
               </li>
             </ul>

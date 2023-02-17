@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function LoginPage() {
   return (
-    <LoginBox Input1={'Email'} Input2={'Senha'} Botao1={'Voltar'} Botao2={'Entrar'} logo={'/cloudservice.png'} typeInput1={'email'} typeInput2={'password'}/>
+    <LoginBox input1={'Email'} input2={'Senha'} botao1={'Voltar'} botao2={'Entrar'} logo={'/cloudservice.png'} typeInput1={'email'} typeInput2={'password'}/>
 
     
   )
