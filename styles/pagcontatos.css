@@ -7,7 +7,7 @@
 
 
 
-@media (max-width: 655px) {
+@media (max-width: 740px) {
     .containerpagcontatos{
         width: 100%;
         display: block;
@@ -15,3 +15,12 @@
 
   }
 }
+
+
+@media (max-width: 321px) {
+    .usuario p{
+        font-size: 16;
+    }
+        
+
+  }

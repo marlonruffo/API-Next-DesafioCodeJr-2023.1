@@ -15,8 +15,8 @@ export default function ContatoPage() {
     <div>
     <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'}/>
     <div className='containerpagcontatos'>
-    <CardContato1 titulo={'Entre em contato com a gente'} userInstagram={'Cloudrestaurant'} userFacebook={'Cloudrestaurant'} userLinkedin={'Cloudrestaurant'}/>
-    <CardLocalizacao endereco={'Instituto de Ciências Exatas - Rua José Lourenço Kelmer, Campus Universitário Bairro São Pedro CEP: 36036-900'}/>
+      <CardContato1  userInstagram={'Cloudrestaurant'} userFacebook={'Cloudrestaurant'} userEmail={'cloudservice@contato.com'}/>
+      <CardLocalizacao endereco={'Instituto de Ciências Exatas - Rua José Lourenço Kelmer, Campus Universitário Bairro São Pedro CEP: 36036-900'}/>
     </div>
 
     <Footer1 logoEmpresa={'/cloudservice.png'} escritaCentro1={'Italian Cuisine'} logoRedeSocial11={'/instagram.png'} logoRedeSocial22={'/facebook.png'} logoRedeSocial33={'/linkedin.png'} />

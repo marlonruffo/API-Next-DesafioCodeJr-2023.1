@@ -22,17 +22,23 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.instagraminfo,.facebookinfo, .linkedininfo{
+.instagraminfo,.facebookinfo, .gmailinfo{
   display: flex;
   align-items: center;
+
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  padding-left: 20px;
+
   margin-top: 10px;
 }
+.userinf{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.instagraminfo p,.facebookinfo p, .linkedininfo p{
+.instagraminfo p,.facebookinfo p, .gmailinfo p{
   margin-left: 10px;
 }
 
@@ -67,7 +73,7 @@
     .Textocartaoredes{
       font-size: 40px;
     }
-    .instagraminfo,.facebookinfo, .linkedininfo{
+    .instagraminfo,.facebookinfo, .gmailinfo{
       display: flex;
       align-items: center;
       font-size: 20px;
@@ -79,17 +85,17 @@
   
   }
 
-  @media (max-width: 315px) {
+  @media (max-width: 317px) {
 
 
   
     .Textocartaoredes{
       font-size: 30px;
     }
-    .instagraminfo,.facebookinfo, .linkedininfo{
+    .instagraminfo,.facebookinfo, .gmailinfo{
       display: flex;
       align-items: center;
-      font-size: 20px;
+      font-size: 16px;
       
       font-weight: 400;
       padding-left: 5px;

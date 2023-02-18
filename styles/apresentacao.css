@@ -77,7 +77,7 @@
         font-size: 50px;
         font-weight: 400;
         line-height: 40px;
-        margin-top: 20px;
+        margin-top: 20;
       }
       .apresentacao-dir h2{
         font-family: 'Sacramento', cursive;
@@ -116,6 +116,7 @@
         font-size: 40px;
         font-weight: 400;
         line-height: 40px;
+        margin-top: 0px;
         
       }
 
@@ -149,27 +150,3 @@
 
 
 
-    @media (max-width: 293px) {
-      .apresentacao-container {
-        height: 1150px;
-      }
-
-    }
-    @media (max-width: 256px) {
-      .apresentacao-container {
-        height: 1200px;
-      }
-
-    }
-    @media (max-width: 232px) {
-      .apresentacao-container {
-        height: 1300px;
-      }
-
-    }
-
-    @media (max-width: 199px) {
-      .apresentacao-container {
-        height: 1350px;
-      }
-    }
