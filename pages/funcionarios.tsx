@@ -16,9 +16,7 @@ export default function funcionariosPage() {
         <CardFuncionario/>
         <CardFuncionario/>
         <CardFuncionario/>
-        <CardFuncionario/>
-        <CardFuncionario/>
-        <CardFuncionario/>
+
 
         
     </div>

@@ -12,6 +12,15 @@
     flex-wrap: wrap;
     
 }
+.Titulopaginas{
+    font-family: 'Pridi', serif;
+    font-weight: 1000;
+    font-size: 40px;
+    color: #af7839;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 @media (max-width: 510px) {
