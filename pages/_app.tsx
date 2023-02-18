@@ -6,7 +6,7 @@ import '../styles/footer.css'
 import '../styles/cardcomidaprincipal.css'
 import '../styles/home.css'
 import '../styles/apresentacao.css'
-import '../styles/cardbebida.css'
+import '../styles/cardvertical.css'
 import '../styles/localizacao.css'
 import '../styles/pagcontatos.css'
 

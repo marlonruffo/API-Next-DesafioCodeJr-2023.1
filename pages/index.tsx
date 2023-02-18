@@ -23,15 +23,19 @@ export default function HomePage() {
         <CardComidaPrincipal2 nomeDoPrato2={'Risoto'} descricaoDoPrato2={'Risoto cremoso de frutos do mar, feito com arroz arbóreo e um mix de frutos do mar,Finalizado com um toque de queijo parmesão e ervas frescas. É um prato perfeito para quem ama frutos do mar.'} imagemDoPrato2={'/risoto.jpg'}/>
         <h1 className='TitlesHome'>Bebidas</h1>
       <div className="CardverticalHome">
-        <CardVertical imagem={'/vinhofig.jpg'} titulo={'Vinho'}/>
-        <CardVertical imagem={'/refrigerante.png'} titulo={'Refrigerante'}/>
+        <CardVertical imagem={'/vinhofig.jpg'} titulo={'Vinhos'}/>
+        <CardVertical imagem={'/refrigerante.png'} titulo={'Refrigerantes'}/>
         <CardVertical imagem={'/drinks.png'} titulo={'Drinks'}/>
+
+        
 
       </div>
       <h1 className='TitlesHome'>Sobremesas</h1>
       <div className="CardverticalHome">
       <CardVertical imagem={'/tiramisu.png'} titulo={'Tiramisù'}/>
       <CardVertical imagem={'/pannacotta.png'} titulo={'Panna cotta'}/>
+      <CardVertical imagem={'/cannoli.jpg'} titulo={'Cannoli'}/>
+
 
       </div>
 
