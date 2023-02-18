@@ -1,0 +1,12 @@
+.containerFunc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .containerFunc{
+        justify-content: center;
+    
+  }
+}

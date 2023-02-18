@@ -9,6 +9,8 @@ import '../styles/apresentacao.css'
 import '../styles/cardvertical.css'
 import '../styles/localizacao.css'
 import '../styles/pagcontatos.css'
+import '../styles/cardfuncionario.css'
+import '../styles/pagefunc.css'
 
 
 export default function App({ Component, pageProps }) {
