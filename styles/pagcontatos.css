@@ -1,0 +1,17 @@
+.containerpagcontatos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px
+}
+
+
+
+@media (max-width: 655px) {
+    .containerpagcontatos{
+        width: 100%;
+        display: block;
+        
+
+  }
+}

@@ -7,26 +7,27 @@ interface CardContatoProps{
 }
 export function CardContato1({titulo,userInstagram,userFacebook,userLinkedin}:CardContatoProps){
     return(
-        <div className='Cartaoinfo-container'>
 
-        <div className='Cartaoredessociais'>
-            <h1 className='Textocartaoredes'>{titulo}</h1>
-            <div className='instagraminfo'>
-                <NextImage src={'/instagram.png'} alt={'userInstagram'} width={70} height={70} />
-                <p className='usuario'>CloudRestaurant</p>
-            </div>
-            <div className='facebookinfo'>
-                <NextImage src={'/facebook.png'} alt={'userFacebook'} width={70} height={70} />
-                <p className='usuario'>CloudRestaurant</p>
-            </div>
-            <div className='linkedininfo'>
-                <NextImage src={'/linkedin.png'} alt={'userLinkedin'} width={70} height={70} />
-                <p className='usuario'>CloudRestaurant</p>
-            </div>
-            
-            
+                <div className="Cartaoloc-container">
+                <div className="Cartaolocalizacao">
+                <h1 className='Textocartaoredes'>{titulo}</h1>
+                    <div className='instagraminfo'>
+                        <NextImage src={'/instagram.png'} alt={'userInstagram'} width={70} height={70} />
+                    <p className='usuario'>{userInstagram}</p>
+                    </div>
+                    <div className='facebookinfo'>
+                        <NextImage src={'/facebook.png'} alt={'userFacebook'} width={70} height={70} />
+                        <p className='usuario'>{userFacebook}</p>
+                    </div>
+                    <div className='linkedininfo'>
+                        <NextImage src={'/linkedin.png'} alt={'userLinkedin'} width={70} height={70} />
+                        <p className='usuario'>{userLinkedin}</p>
+                    </div>
 
-         </div>
-        </div>
+
+                </div>
+            </div>
     )
 }
+
+

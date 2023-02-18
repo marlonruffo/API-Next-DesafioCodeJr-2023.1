@@ -7,6 +7,8 @@ import '../styles/cardcomidaprincipal.css'
 import '../styles/home.css'
 import '../styles/apresentacao.css'
 import '../styles/cardbebida.css'
+import '../styles/localizacao.css'
+import '../styles/pagcontatos.css'
 
 
 export default function App({ Component, pageProps }) {
