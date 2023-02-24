@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function HomePage() {
   return (
     <div className='PaginaInteira'>
-        <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'}/>
+        <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'} item1redireciona={'/'} item2redireciona={'/contato'} item3redireciona={'/funcionarios'} item4redireciona={'/login'}/>
         <Cardapresentacao foto={'/apresentacao1.jpg'} titulo={'Cloud Service Restaurant'} descricao={'Italian Cuisine'} textoInformacao={'O Cloud Service é um restaurante de massas de renome em Juiz de Fora. Oferece uma ampla seleção de massas com molhos variados e um ambiente acolhedor para desfrutar da refeição. Com uma equipe de renomados chefes, o Cloud Service é conhecido por sua qualidade e sabor. A fusão perfeita de culinária e ambiente faz do Cloud Service a escolha ideal para uma refeição inesquecível.'} />
         <h1 className='TitlesHome'>Pratos do dia</h1>
         <CardComidaPrincipal1 nomeDoPrato1={'Carbonara'} descricaoDoPrato1={'Spaghetti ao molho cremoso de ovo, queijo pecorino romano e bacon crocante. Uma receita clássica da culinária italiana que equilibra perfeitamente os sabores adocicados e salgados para um prato satisfatório.'} imagemDoPrato1={'/carbonara1.jpg'}/>

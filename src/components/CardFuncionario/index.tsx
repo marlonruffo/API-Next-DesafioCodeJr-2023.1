@@ -12,7 +12,7 @@ export function CardFuncionario(){
             </div>
             <div className='Emaildofuncionario func'>
                 <label>Email:</label>
-                <p>ruffomarlon9@gmail.com</p>
+                <p>fernando.giardini@codejr.com.br</p>
             </div>
             <div className='Aniversariodofuncionario func'>
                 <label>Aniversário:</label>
