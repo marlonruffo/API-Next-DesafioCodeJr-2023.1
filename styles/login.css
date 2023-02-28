@@ -83,3 +83,8 @@
 }
 
 
+@media (max-width: 300px) {
+    .Login_box{
+        width: 100%;
+    }
+  }

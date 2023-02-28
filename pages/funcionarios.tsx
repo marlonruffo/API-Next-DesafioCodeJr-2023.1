@@ -10,7 +10,6 @@ import { Navbar1 } from '../src/components/Navbar'
 export default function funcionariosPage() {
   return (
     <div className='Pagina-funcionarios'>
-         <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'} item1redireciona={'/'} item2redireciona={'/contato'} item3redireciona={'/funcionarios'} item4redireciona={'/login'}/>
     <div className='Titulopaginas'>Funcionários</div>
         <div className='containerFunc'>
         <CardFuncionario/>
@@ -20,7 +19,6 @@ export default function funcionariosPage() {
 
         
     </div>
-    <Footer1 logoEmpresa={'/cloudservice.png'} escritaCentro1={'Italian Cuisine'} logoRedeSocial11={'/instagram.png'} logoRedeSocial22={'/facebook.png'} logoRedeSocial33={'/linkedin.png'} />
 
     </div>
 
