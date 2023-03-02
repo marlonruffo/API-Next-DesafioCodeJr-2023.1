@@ -24,6 +24,11 @@
     
     margin: 0 auto;
 }
+.Botoes a { 
+    
+    color: inherit; 
+    text-decoration: none;
+} 
 
 .Login_box input{
     background-color: #FAF9F9;

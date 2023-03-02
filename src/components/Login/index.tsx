@@ -1,3 +1,4 @@
+import { redirect } from 'next/dist/server/api-utils';
 import NextImage from 'next/image'
 
 interface LoginBoxProps {
@@ -8,10 +9,12 @@ interface LoginBoxProps {
     botao2:string;
     typeInput1: string;
     typeInput2: string;
+    redirect1: string;
+    redirect2: string;
 }	
 
 
-export function LoginBox({logo, input1, input2, botao1, botao2, typeInput1, typeInput2}:LoginBoxProps) {
+export function LoginBox({logo, input1, input2, botao1, botao2, typeInput1, typeInput2, redirect1, redirect2}:LoginBoxProps) {
     return(
         
         <div className='Login_box'>
@@ -25,8 +28,8 @@ export function LoginBox({logo, input1, input2, botao1, botao2, typeInput1, type
                     <label>{input2}</label>
                     <input type={typeInput2} name={typeInput2}/>
                     <div className='Botoes'>
-                        <button className='Voltar'>{botao1}</button>
-                        <button type='submit'>{botao2}</button>
+                        <button className='Voltar' ><a href={redirect1}> {botao1} </a></button>
+                        <button ><a href={redirect2}> {botao2} </a></button>
                     </div>
                 </div>
 

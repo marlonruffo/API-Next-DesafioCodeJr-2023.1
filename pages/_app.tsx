@@ -12,6 +12,9 @@ import '../styles/pagcontatos.css'
 import '../styles/cardfuncionario.css'
 import '../styles/pagefunc.css'
 import '../styles/tabela.css'
+
+import '../styles/funcionariosadmin.css'
+
 import { Navbar1 } from '../src/components/Navbar'
 import { Footer1 } from '../src/components/Footer'
 
