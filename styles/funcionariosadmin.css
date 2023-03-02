@@ -10,7 +10,12 @@ table td, table th{
     border: 1px solid #000;
     padding: 5px;
 }
-
+table th{
+    background-color: #E3E0D1;
+    color: #c91a1a;
+    font-size: 20px;
+    
+}
 
 table tr:hover{
     background-color: #c91a1a;
@@ -23,7 +28,10 @@ td button{
     margin: 0 5px;
     cursor: pointer;
 }
-
+.confirmDelete{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
 td button:hover{
     background-color: #e8cfb4;
     color: #fff;
@@ -38,8 +46,18 @@ table tr:hover{
 .botaoaddfuncionario {
 display: flex;
 justify-content: center;
-margin-bottom: 5px;
+margin-bottom: 10px;
 
+}
+.InputBoxesmodal label{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #000000;
+    opacity: 50%;
+    margin-top: 10px;
 }
 .botaoaddfuncionario button{
     cursor: pointer;
@@ -54,7 +72,69 @@ margin-bottom: 5px;
     background-color: #fa2201;
     color: #f1f1f1;
 }
+.viewmodal{
+    padding-left: 10px;
+    color: rgb(57, 50, 50);
+    font-size: 19px
+}
+.viewmodalbutton{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #B95553;
+    width: 50%;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f2f2f2;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.viewmodalbutton:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    transition: 0.5s;
+}
 
+.h2viewmodal{
+    color:black;
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+.login_boxfuncadmin{
+    height: auto;
+    margin-top: 0;
+}
+
+.modalprep{
+    display: flex;
+    flex-direction: column;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-conteudo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
 
 @media (max-width: 603px) {
     td button{
