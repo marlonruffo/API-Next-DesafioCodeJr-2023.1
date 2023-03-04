@@ -55,7 +55,7 @@ margin-bottom: 10px;
     font-size: 16px;
     margin-left: 10px;
     font-weight: bold;
-    color: #000000;
+    color: #AF3D3D;
     opacity: 50%;
     margin-top: 10px;
 }
@@ -73,10 +73,18 @@ margin-bottom: 10px;
     color: #f1f1f1;
 }
 .viewmodal{
+
+    letter-spacing: 1px;
+    font-family: 'Pridi', serif;
+    transition: .5s;
+    outline-color: #AC9479;
     padding-left: 10px;
-    color: rgb(57, 50, 50);
+    font-weight: 400;
+    color: rgb(36, 18, 18);
     font-size: 19px
+
 }
+
 .viewmodalbutton{
     justify-content: center;
     display: flex;
@@ -102,7 +110,13 @@ margin-bottom: 10px;
     transform: scale3d(1.1, 1.1, 1.1);
     transition: 0.5s;
 }
-
+input{
+    opacity: 90%;
+    letter-spacing: 1px;
+    font-family: 'Pridi', serif;
+    transition: .5s;
+    outline-color: #AC9479;
+}
 .h2viewmodal{
     color:black;
     font-size: 25px;

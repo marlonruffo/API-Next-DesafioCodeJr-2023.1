@@ -21,6 +21,15 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.Loginall{
+    align-items: center;
+    margin-bottom: 150px;
+
+}
+.containerpagcontatos{
+    margin-bottom: 26px;
+
+}
 
 
 @media (max-width: 510px) {

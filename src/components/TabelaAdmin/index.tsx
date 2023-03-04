@@ -88,6 +88,32 @@ interface Funcionario {
       setModalCriacaoAberto(true)
     }
 
+    const editFuncionario = (id: number, updatedFuncionario: Funcionario) => {
+      const index = funcionarios.findIndex((funcionario) => funcionario.id === id);
+      if (index !== -1) {
+        const funcionariosAtualizados = [...funcionarios];
+        funcionariosAtualizados[index] = updatedFuncionario;
+        setFuncionarios(funcionariosAtualizados);
+      }
+      setModalEdicaoAberto(false);
+      setFuncionarioParaEdicao(null);
+    };
+
+    const handleEditChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = event.target;
+      setFuncionarioParaEdicao(prevState => ({
+        ...prevState,
+        [name]: value
+      }));
+    };
+    
+    const handleEditSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      if (funcionarioParaEdicao) {
+        editFuncionario(funcionarioParaEdicao.id, funcionarioParaEdicao);
+      }
+    };
+
     return (
       <>
             <div className='botaoaddfuncionario'>
@@ -117,6 +143,7 @@ interface Funcionario {
             ))}
           </tbody>
         </table>
+
         {modalAberto && (
           <div className="modal">
             <div className="modal-conteudo">
@@ -126,15 +153,15 @@ interface Funcionario {
             </div>
             <div className='InputBoxesmodal'>
               <h2 className='viewmodal h2viewmodal' >{funcionarioSelecionado.name}</h2>
-              <label htmlFor="">ID:</label>
+              <label >ID:</label>
               <p className='viewmodal'> {funcionarioSelecionado.id}</p>
-              <label htmlFor="">Email:</label>
+              <label >Email:</label>
               <p className='viewmodal'> {funcionarioSelecionado.email}</p>
-              <label htmlFor="">Salário:</label>
+              <label >Salário:</label>
               <p className='viewmodal'> {funcionarioSelecionado.salario}</p>
-              <label htmlFor="">Aniversário:</label>
+              <label >Aniversário:</label>
               <p className='viewmodal'> {funcionarioSelecionado.aniversario}</p>
-              <label htmlFor="">Cargo:</label>
+              <label >Cargo:</label>
               <p className='viewmodal'> {funcionarioSelecionado.cargo}</p>
               <button className='viewmodalbutton' onClick={() => setModalAberto(false)}>Fechar</button>
             </div>
@@ -150,29 +177,38 @@ interface Funcionario {
     <div className='LogoDoSite'>
                 <NextImage src='/cloudservice.png' alt= 'Logo do Site' width={100} height={100} />
             </div>
-            <form action='' method=''>
+            <form onSubmit={handleEditSubmit}>
                 <div className='InputBoxesmodal'>
+                <div className='nomemodal modalprep'>
+
+                <label>Nome: </label>
+                <input type='text' name='name' value={funcionarioParaEdicao?.name ?? ''}
+              onChange={handleEditChange}/>
+                </div>
                   <div className='emailmodal modalprep'>
 
                     <label>Email: </label>
-                    <input type='email' name='email'/>
+                    <input type='email' name='email'value={funcionarioParaEdicao?.email ?? ''}
+              onChange={handleEditChange}/>
                   </div>
                   <div className='salariomodal modalprep'>
                       <label>Salário:</label>
-                    <input type='number' name='salario'/>
+                    <input type='number' name='salario'value={funcionarioParaEdicao?.salario ?? ''}
+              onChange={handleEditChange}/>
                   </div>
                   <div className='aniversariomodal modalprep'>
                     <label>Aniversário:</label>
-                    <input type='text' name='aniversario'/>
+                    <input type='text' name='aniversario'value={funcionarioParaEdicao?.aniversario ?? ''}
+              onChange={handleEditChange}/>
                   </div>
                   <div className='cargomodal modalprep'>
 
                     <label>Cargo:</label>
-                    <input type='text' name='cargo'/>
+                    <input type='text' name='cargo' value={funcionarioParaEdicao?.cargo ?? ''}onChange={handleEditChange}/>
                   </div>
                     <div className='Botoes'>
-                        <button onClick={() => setModalEdicaoAberto(false)}className='Voltar' ><a href='#'> Fechar </a></button>
-                        <button ><a href='#'> Editar </a></button>
+                        <button onClick={() => setModalEdicaoAberto(false)}className='Voltar' ><a > Fechar </a></button>
+                        <button type='submit'><a > Editar </a></button>
                     </div>
                 </div>
 
@@ -243,9 +279,6 @@ interface Funcionario {
     </div>
   </div>
 )}
-    
-
-
       </>
     );
   }
