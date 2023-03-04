@@ -40,13 +40,14 @@ interface Funcionario {
     }
   
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault()
+      event.preventDefault();
+      const newId = Math.max(...funcionarios.map(funcionario => funcionario.id)) + 1;
       const newFuncionario: Funcionario = {
         ...novoFuncionario,
-        id: funcionarios.length + 1
-      }
-      funcionarios.push(newFuncionario)
-      setModalCriacaoAberto(false)
+        id: newId
+      };
+      setFuncionarios([...funcionarios, newFuncionario]);
+      setModalCriacaoAberto(false);
       setNovoFuncionario({
         id: 0,
         name: '',
@@ -54,8 +55,8 @@ interface Funcionario {
         salario: 0,
         aniversario: '',
         cargo: ''
-      })
-    }
+      });
+    };
 
     const [funcionarioParaEdicao, setFuncionarioParaEdicao] = useState<Funcionario | null>(null);
   
