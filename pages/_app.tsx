@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <div className='navbarAllpages'>
-      <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'} item1redireciona={'/'} item2redireciona={'/contato'} item3redireciona={'/funcionariospage'} item4redireciona={'/login'}/>
+      <Navbar1 nomeDoSite={'Cloud Service'} item1={'Home'} item2={'Contato'} item3={'Funcionários'} item4={'Login'} logo={'/logonav.png'} item1redireciona={'/'} item2redireciona={'/contato'} item3redireciona={'/funcionarios'} item4redireciona={'/login'}/>
       </div>
         
         <Component {...pageProps} />

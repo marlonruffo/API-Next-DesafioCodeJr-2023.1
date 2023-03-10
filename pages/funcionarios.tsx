@@ -6,7 +6,7 @@ export default function funcionariosPage() {
   const [listaFuncionarios, setFuncionarios] = useState([]);
 
   useEffect(() => {
-      axios.get('http://localhost:3000/funcionarios')
+      axios.get('http://localhost:3001/funcionarios')
           .then(resposta => {
               setFuncionarios(resposta.data)
           })

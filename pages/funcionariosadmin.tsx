@@ -25,7 +25,7 @@ export default function FuncionariosAdminPage() {
   const [listaFuncionarios, setFuncionarios] = useState([]);
 
   useEffect(() => {
-      axios.get('http://localhost:3000/funcionarios')
+      axios.get('http://localhost:3001/funcionarios')
           .then(resposta => {
               setFuncionarios(resposta.data)
           })
@@ -35,17 +35,41 @@ export default function FuncionariosAdminPage() {
   }, [])
 
 
-  async function deleteFuncionario(funcionariopexcluir) {
-    axios.delete(`http://localhost:3000/funcionarios/${funcionariopexcluir.id}`)
-    .then(() => {
-        const listafuncionariosempresa = listaFuncionarios.filter(listaFuncionarios => listaFuncionarios.id !== funcionariopexcluir.id)
-        setFuncionarios([...listafuncionariosempresa])
-    })
+
+  async function deleteFuncionario() {
+    axios.delete(`http://localhost:3001/funcionarios/${funcionarioSelecionado.id}`)
+      .then(resposta => {
+        setFuncionarios(listaFuncionarios.filter(funcionario => funcionario.id !== funcionarioSelecionado.id));
+        setModalDeleteAberto(false);
+      })
+      .catch(erro => {
+        console.log(erro);
+      });
   }
+
+  const editarFuncionario = (event) => {
+    event.preventDefault();
+    axios.put(`http://localhost:3001/funcionarios/${funcionarioSelecionado.id}`, funcionarioSelecionado)
+      .then(() => {
+        const funcionariosAtualizados = listaFuncionarios.map((funcionario) => {
+          if (funcionario.id === funcionarioSelecionado.id) {
+            return funcionarioSelecionado;
+          } else {
+            return funcionario;
+          }
+        });
+        setFuncionarios(funcionariosAtualizados);
+        setModalEdicaoAberto(false);
+      })
+      .catch((erro) => {
+        console.log(erro);
+      });
+    }
+
 
   async function adicionarFuncionario() {
     try {
-      const resposta = await axios.post('http://localhost:3000/funcionarios', novoFuncionario);
+      const resposta = await axios.post('http://localhost:3001/funcionarios', novoFuncionario);
       setFuncionarios([...listaFuncionarios, resposta.data]);
       setModalCriacaoAberto(false);
       setNovoFuncionario({
@@ -60,22 +84,8 @@ export default function FuncionariosAdminPage() {
     }
   }
   
-  async function editarFuncionario(funcionarioEditado) {
-    try {
-      await axios.put(`http://localhost:3000/funcionarios/${funcionarioEditado.id}`, funcionarioEditado);
-      const listaAtualizada = listaFuncionarios.map(funcionario => {
-        if (funcionario.id === funcionarioEditado.id) {
-          return funcionarioEditado;
-        }
-        return funcionario;
-      });
-      setFuncionarios(listaAtualizada);
-      setModalEdicaoAberto(false);
-      setFuncionarioSelecionado(null);
-    } catch (erro) {
-      console.log(erro);
-    }
-  }
+
+  
 
 
 
@@ -186,16 +196,14 @@ export default function FuncionariosAdminPage() {
     <div className='LogoDoSite'>
                 <NextImage src='/cloudservice.png' alt= 'Logo do Site' width={100} height={100} />
             </div>
-            <form action='' method=''>
+            <form onSubmit={deleteFuncionario}>
                 <div className='InputBoxesmodal'>
                   <p className='confirmDelete'>Tem certeza que deseja deletar {funcionarioSelecionado.name}?</p>
                     <div className='Botoes'>
                     <button className='Voltar' onClick={() => setModalDeleteAberto(false)}>
   <a> Fechar </a>
 </button> 
-<button onClick={deleteFuncionario}>
-  <a> Deletar </a>
-</button>        
+<button type='submit'><a> Deletar </a></button>        
                     </div>
                 </div>
 
