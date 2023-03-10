@@ -5,13 +5,14 @@ import { MdEdit} from 'react-icons/md';
 import { FiTrash2, FiEye } from 'react-icons/fi';
 import axios from 'axios';
 
+
 export default function FuncionariosAdminPage() {
 
   const [modalCriacaoAberto, setModalCriacaoAberto] = useState(false);
   const [modalAberto, setModalAberto] = useState(false);
   const [modalEdicaoAberto, setModalEdicaoAberto] = useState(false);
   const [modalDeleteAberto, setModalDeleteAberto] = useState(false);
-  const [listaFuncionarios, setFuncionarios] = useState([]);
+
   const [funcionarioSelecionado, setFuncionarioSelecionado] = useState(null);
   const [novoFuncionario, setNovoFuncionario] = useState({
     name: "",
@@ -21,75 +22,62 @@ export default function FuncionariosAdminPage() {
     cargo: "",
   });
 
-  async function deleteFuncionario() {
-    try {
-      const response = await fetch(`/api/funcionarios/${funcionarioSelecionado.id}`, {
-        method: 'DELETE'
-      });
-      const data = await response.json();
-      console.log(data);
-      setFuncionarios(listaFuncionarios.filter(funcionario => funcionario.id !== funcionarioSelecionado.id));
-      setModalDeleteAberto(false);
-      await atualizarFuncionarios();
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-async function adicionarFuncionario(e) {
-  e.preventDefault();
-  try {
-    const response = await fetch("/api/funcionarios", {
-      method: "POST",
-      body: JSON.stringify(novoFuncionario),
-    });
-    const data = await response.json();
-    setFuncionarios([...listaFuncionarios, data]);
-    setModalCriacaoAberto(false);
-    setNovoFuncionario({
-      name: "",
-      email: "",
-      salario: "",
-      aniversario: "",
-      cargo: "",
-    });
-    await atualizarFuncionarios();
-  } catch (error) {
-    console.error(error);
-  }
-}
-  
-  
-  
-  
-  
-  
-
-  const EditarFuncionario = async (event) => {
-    event.preventDefault();
-    try {
-      await axios.put(`http://localhost:3000/funcionarios/${funcionarioSelecionado.id}`, funcionarioSelecionado);
-      setModalEdicaoAberto(false);
-      console.log("entroufpd")
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  const atualizarFuncionarios = async () => {
-    const response = await fetch('/api/funcionarios');
-    const data = await response.json();
-    setFuncionarios(data.funcionarios);
-  }
+  const [listaFuncionarios, setFuncionarios] = useState([]);
 
   useEffect(() => {
-    async function fetchFuncionarios() {
-      
-      const response = await fetch('/api/funcionarios');
-      const data = await response.json();
-      setFuncionarios(data.funcionarios);
+      axios.get('http://localhost:3000/funcionarios')
+          .then(resposta => {
+              setFuncionarios(resposta.data)
+          })
+          .catch(erro => {
+              console.log(erro)
+          })
+  }, [])
+
+
+  async function deleteFuncionario(funcionariopexcluir) {
+    axios.delete(`http://localhost:3000/funcionarios/${funcionariopexcluir.id}`)
+    .then(() => {
+        const listafuncionariosempresa = listaFuncionarios.filter(listaFuncionarios => listaFuncionarios.id !== funcionariopexcluir.id)
+        setFuncionarios([...listafuncionariosempresa])
+    })
+  }
+
+  async function adicionarFuncionario() {
+    try {
+      const resposta = await axios.post('http://localhost:3000/funcionarios', novoFuncionario);
+      setFuncionarios([...listaFuncionarios, resposta.data]);
+      setModalCriacaoAberto(false);
+      setNovoFuncionario({
+        name: "",
+        email: "",
+        salario: "",
+        aniversario: "",
+        cargo: "",
+      });
+    } catch (erro) {
+      console.log(erro);
     }
-    fetchFuncionarios();
-  }, []);
+  }
+  
+  async function editarFuncionario(funcionarioEditado) {
+    try {
+      await axios.put(`http://localhost:3000/funcionarios/${funcionarioEditado.id}`, funcionarioEditado);
+      const listaAtualizada = listaFuncionarios.map(funcionario => {
+        if (funcionario.id === funcionarioEditado.id) {
+          return funcionarioEditado;
+        }
+        return funcionario;
+      });
+      setFuncionarios(listaAtualizada);
+      setModalEdicaoAberto(false);
+      setFuncionarioSelecionado(null);
+    } catch (erro) {
+      console.log(erro);
+    }
+  }
+
+
 
   return (
     <>
@@ -159,7 +147,7 @@ async function adicionarFuncionario(e) {
     <div className='LogoDoSite'>
                 <NextImage src='/cloudservice.png' alt= 'Logo do Site' width={100} height={100} />
             </div>
-            <form onSubmit={EditarFuncionario}>
+            <form onSubmit={editarFuncionario}>
     <div className='InputBoxesmodal'>
       <div className='nomemodal modalprep'>
         <label>Nome:</label>

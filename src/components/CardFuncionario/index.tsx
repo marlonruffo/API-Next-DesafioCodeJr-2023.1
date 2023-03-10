@@ -1,6 +1,7 @@
 import NextImage from 'next/image'
 import React, { useState, useEffect } from 'react';
 interface CardFuncionarioProps {
+    key: number;
     name: string;
     email: string;
     aniversario: string;

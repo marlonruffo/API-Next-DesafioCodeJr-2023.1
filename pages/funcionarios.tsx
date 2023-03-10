@@ -1,22 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { CardFuncionario } from '../src/components/CardFuncionario'
-import { Footer1 } from '../src/components/Footer'
-import { Navbar1 } from '../src/components/Navbar'
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 export default function funcionariosPage() {
   const [listaFuncionarios, setFuncionarios] = useState([]);
 
   useEffect(() => {
-    async function fetchFuncionarios() {
-      const res = await fetch('/api/funcionarios');
-      const data = await res.json();
-      setFuncionarios(data.funcionarios);
-    }
+      axios.get('http://localhost:3000/funcionarios')
+          .then(resposta => {
+              setFuncionarios(resposta.data)
+          })
+          .catch(erro => {
+              console.log(erro)
+          })
+  }, [])
 
-    fetchFuncionarios();
-  }, []);
   return (
     <div className='Pagina-funcionarios'>
     <div className='Titulopaginas'>Funcionários</div>
