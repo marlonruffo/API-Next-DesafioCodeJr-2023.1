@@ -16,9 +16,6 @@ type NavbarProps = {
 
 export function Navbar1({logo, nomeDoSite, item1, item1redireciona, item2, item2redireciona, item3, item3redireciona, item4, item4redireciona}: NavbarProps) {
   
-
-
-
   return (
   <header className="header">
 

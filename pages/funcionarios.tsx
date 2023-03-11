@@ -25,13 +25,12 @@ export default function funcionariosPage() {
         name={funcionario.name}
         email={funcionario.email}
         aniversario={funcionario.aniversario}
+        salario={funcionario.salario}
         cargo={funcionario.cargo}
     />
 ))}
     </div>
 
     </div>
-
-
   )
 }

@@ -1,6 +1,5 @@
 
 import NextImage from 'next/image';
-
 interface CardapresentacaoProps {
   foto: string;
   titulo: string;

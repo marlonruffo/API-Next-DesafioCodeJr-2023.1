@@ -5,14 +5,12 @@ import { MdEdit} from 'react-icons/md';
 import { FiTrash2, FiEye } from 'react-icons/fi';
 import axios from 'axios';
 
-
 export default function FuncionariosAdminPage() {
 
   const [modalCriacaoAberto, setModalCriacaoAberto] = useState(false);
   const [modalAberto, setModalAberto] = useState(false);
   const [modalEdicaoAberto, setModalEdicaoAberto] = useState(false);
   const [modalDeleteAberto, setModalDeleteAberto] = useState(false);
-
   const [funcionarioSelecionado, setFuncionarioSelecionado] = useState(null);
   const [novoFuncionario, setNovoFuncionario] = useState({
     name: "",
@@ -33,8 +31,6 @@ export default function FuncionariosAdminPage() {
               console.log(erro)
           })
   }, [])
-
-
 
   async function deleteFuncionario() {
     axios.delete(`http://localhost:3001/funcionarios/${funcionarioSelecionado.id}`)
@@ -66,7 +62,6 @@ export default function FuncionariosAdminPage() {
       });
     }
 
-
   async function adicionarFuncionario() {
     try {
       const resposta = await axios.post('http://localhost:3001/funcionarios', novoFuncionario);
@@ -84,11 +79,6 @@ export default function FuncionariosAdminPage() {
     }
   }
   
-
-  
-
-
-
   return (
     <>
       <div className='Titulopaginas'>Funcionários admin</div>
@@ -111,14 +101,8 @@ export default function FuncionariosAdminPage() {
                 <td>{funcionario.name}</td>
                 <td>{funcionario.email}</td>
                 <td>
-                <button onClick={() => {
-  setFuncionarioSelecionado(funcionario);
-  setModalDeleteAberto(true);
-}}><FiTrash2 size={30} color="#AC9479" /></button>
-                  <button onClick={() => {
-  setFuncionarioSelecionado(funcionario);
-  setModalEdicaoAberto(true);
-}}><MdEdit size={30} color="#AC9479" /></button>
+                <button onClick={() => {setFuncionarioSelecionado(funcionario);setModalDeleteAberto(true);}}><FiTrash2 size={30} color="#AC9479" /></button>
+                  <button onClick={() => {setFuncionarioSelecionado(funcionario);setModalEdicaoAberto(true);}}><MdEdit size={30} color="#AC9479" /></button>
                   <button onClick={() => {setFuncionarioSelecionado(funcionario);setModalAberto(true);}}><FiEye size={30} color="#AC9479" /></button>
                 </td>
               </tr>
@@ -280,7 +264,6 @@ export default function FuncionariosAdminPage() {
     </div>
     <div className="cargomodal modalprep">
       <label>Cargo:</label>
-
       <input
         type="text"
         name="cargo"

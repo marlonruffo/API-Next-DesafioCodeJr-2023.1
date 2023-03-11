@@ -1,4 +1,4 @@
-import { redirect } from 'next/dist/server/api-utils';
+
 import NextImage from 'next/image'
 
 interface LoginBoxProps {
@@ -12,8 +12,6 @@ interface LoginBoxProps {
     redirect1: string;
     redirect2: string;
 }	
-
-
 export function LoginBox({logo, input1, input2, botao1, botao2, typeInput1, typeInput2, redirect1, redirect2}:LoginBoxProps) {
     return(
         

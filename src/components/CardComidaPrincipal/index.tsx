@@ -3,9 +3,7 @@ interface CardComidaPrincipalProps1 {
     nomeDoPrato1: string;
     descricaoDoPrato1: string;
     imagemDoPrato1: string;
-
 }
-
 interface CardComidaPrincipalProps2 {
     nomeDoPrato2: string;
     descricaoDoPrato2: string;
@@ -29,8 +27,6 @@ export function CardComidaPrincipal1({nomeDoPrato1, descricaoDoPrato1, imagemDoP
         </div>
     )
 }
-
-
 
 /*Imagem a direita e texto a esquerda*/
 export function CardComidaPrincipal2({nomeDoPrato2, descricaoDoPrato2, imagemDoPrato2}: CardComidaPrincipalProps2){

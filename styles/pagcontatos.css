@@ -5,14 +5,10 @@
     padding-top: 0;
 }
 
-
-
 @media (max-width: 740px) {
     .containerpagcontatos{
         width: 100%;
         display: block;
-        
-
   }
 }
 

@@ -11,7 +11,7 @@ import '../styles/localizacao.css'
 import '../styles/pagcontatos.css'
 import '../styles/cardfuncionario.css'
 import '../styles/pagefunc.css'
-import '../styles/tabela.css'
+
 
 import '../styles/funcionariosadmin.css'
 

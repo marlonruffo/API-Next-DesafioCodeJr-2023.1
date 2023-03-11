@@ -5,8 +5,6 @@ interface FooterProps {
     logoRedeSocial11?:string;
     logoRedeSocial22?:string;
     logoRedeSocial33?:string;
-
-
 }
 export function Footer1({logoEmpresa, escritaCentro1, logoRedeSocial11, logoRedeSocial22, logoRedeSocial33}:FooterProps){
     return(

@@ -1,8 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import { Navbar1 } from '../src/components/Navbar'
-import { Footer1 } from '../src/components/Footer'
 import { CardComidaPrincipal1 } from '../src/components/CardComidaPrincipal'
 import { CardComidaPrincipal2 } from '../src/components/CardComidaPrincipal'
 import { Cardapresentacao } from '../src/components/Apresentacao'
@@ -25,9 +21,6 @@ export default function HomePage() {
         <CardVertical imagem={'/vinhofig.jpg'} titulo={'Vinhos'}/>
         <CardVertical imagem={'/refrigerante.png'} titulo={'Refrigerantes'}/>
         <CardVertical imagem={'/drinks.png'} titulo={'Drinks'}/>
-
-        
-
       </div>
       <h1 className='TitlesHome'>Sobremesas</h1>
       <div className="CardverticalHome">

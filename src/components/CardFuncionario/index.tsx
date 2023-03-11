@@ -1,4 +1,3 @@
-import NextImage from 'next/image'
 import React, { useState, useEffect } from 'react';
 interface CardFuncionarioProps {
     key: number;
@@ -6,8 +5,9 @@ interface CardFuncionarioProps {
     email: string;
     aniversario: string;
     cargo: string;
+    salario: number;
 }
-export function CardFuncionario({name, email, aniversario, cargo}: CardFuncionarioProps){
+export function CardFuncionario({name, email, aniversario, cargo, salario}: CardFuncionarioProps){
 
     return(
 
@@ -27,6 +27,10 @@ export function CardFuncionario({name, email, aniversario, cargo}: CardFuncionar
             <div className='Cargodofuncionario func'>
                 <label>Cargo:</label>
                 <p>{cargo}</p>
+            </div>
+            <div className='Salariodofuncionario func'>
+                <label>Salário:</label>
+                <p>{salario}</p>
             </div>
 
         </div>
