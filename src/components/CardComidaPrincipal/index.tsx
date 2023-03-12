@@ -11,10 +11,10 @@ interface CardComidaPrincipalProps2 {
 
 }
 /*Imagem a esquerda e texto a direita*/
-export function CardComidaPrincipal1({nomeDoPrato1, descricaoDoPrato1, imagemDoPrato1}: CardComidaPrincipalProps1){
-    return(
+export function CardComidaPrincipal1({ nomeDoPrato1, descricaoDoPrato1, imagemDoPrato1 }: CardComidaPrincipalProps1) {
+    return (
         <div className='card-container'>
-            <div className="card-1"> 
+            <div className="card-1">
                 <div className="card-image-1">
                     <NextImage src={imagemDoPrato1} alt="Imagem do Prato" width={400} height={200} />
                 </div>
@@ -23,16 +23,16 @@ export function CardComidaPrincipal1({nomeDoPrato1, descricaoDoPrato1, imagemDoP
                     <p>{descricaoDoPrato1}</p>
                 </div>
 
-            </div> 
+            </div>
         </div>
     )
 }
 
 /*Imagem a direita e texto a esquerda*/
-export function CardComidaPrincipal2({nomeDoPrato2, descricaoDoPrato2, imagemDoPrato2}: CardComidaPrincipalProps2){
-    return(
+export function CardComidaPrincipal2({ nomeDoPrato2, descricaoDoPrato2, imagemDoPrato2 }: CardComidaPrincipalProps2) {
+    return (
         <div className='card-container'>
-            <div className="card-2"> 
+            <div className="card-2">
                 <div className="card-image-2">
                     <NextImage src={imagemDoPrato2} alt="Imagem do Prato" width={400} height={200} />
                 </div>
@@ -41,7 +41,7 @@ export function CardComidaPrincipal2({nomeDoPrato2, descricaoDoPrato2, imagemDoP
                     <p>{descricaoDoPrato2}</p>
                 </div>
 
-            </div> 
+            </div>
         </div>
     )
 }

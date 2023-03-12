@@ -7,9 +7,9 @@ interface CardFuncionarioProps {
     cargo: string;
     salario: number;
 }
-export function CardFuncionario({name, email, aniversario, cargo, salario}: CardFuncionarioProps){
+export function CardFuncionario({ name, email, aniversario, cargo, salario }: CardFuncionarioProps) {
 
-    return(
+    return (
 
         <div className="Funcionario">
             <div className='Nomedofuncionario func'>

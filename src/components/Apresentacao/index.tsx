@@ -7,7 +7,7 @@ interface CardapresentacaoProps {
   textoInformacao: string;
 }
 
-export function Cardapresentacao({foto, titulo, descricao, textoInformacao}: CardapresentacaoProps) {
+export function Cardapresentacao({ foto, titulo, descricao, textoInformacao }: CardapresentacaoProps) {
   return (
     <div className="apresentacao-container">
       <div className="apresentacao-esq">
